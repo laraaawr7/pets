@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loja de itens para pets e adoção de animais.">
+    <title>Pet Shop & Adoção</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Pet Shop & Adoção</h1>
+        <nav>
+            <ul>
+                <li><a href="#loja">Loja</a></li>
+                <li><a href="#adocao">Adoção</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="loja">
+        <h2>Nossos Produtos</h2>
+        <div class="produtos">
+            <div class="produto">
+                <img src="caminha-pet.jpg" alt="Caminha para pets">
+                <h3>Caminha para Pets</h3>
+                <p>Confortável e macia, perfeita para o seu pet descansar.</p>
+                <span>R$ 100,00</span>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="brinquedo-pet.jpg" alt="Brinquedo para pets">
+                <h3>Brinquedo para Pets</h3>
+                <p>Brinquedo divertido para manter seu pet entretido.</p>
+                <span>R$ 30,00</span>
+                <button>Comprar</button>
+            </div>
+            <!-- Adicione mais produtos aqui -->
+        </div>
+    </section>
+
+    <section id="adocao">
+        <h2>Adoção de Pets</h2>
+        <div class="pets-adocao">
+            <div class="pet">
+                <img src="cachorro-adocao.jpg" alt="Cachorro para adoção">
+                <h3>Totó</h3>
+                <p>Idade: 2 anos</p>
+                <p>Porte: Médio</p>
+                <button>Adotar</button>
+            </div>
+            <div class="pet">
+                <img src="gato-adocao.jpg" alt="Gato para adoção">
+                <h3>Mimi</h3>
+                <p>Idade: 1 ano</p>
+                <p>Porte: Pequeno</p>
+                <button>Adotar</button>
+            </div>
+            <!-- Adicione mais pets para adoção aqui -->
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Fale Conosco</h2>
+        <form action="/enviar-mensagem" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Pet Shop & Adoção. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
