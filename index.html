@@ -16,13 +16,15 @@
         }
 
         header {
-            background-color: #f8f9fa;
+            background-color: #d699d1;
             padding: 20px;
+            position: relative; /* Para posicionar o carrinho em relação ao header */
         }
 
         h1 {
             margin: 0;
             font-size: 2.5em;
+            color: white;
         }
 
         /* Barra de navegação */
@@ -32,6 +34,7 @@
             display: flex;
             justify-content: center;
             margin-top: 20px;
+            color:#c8ff00;
         }
 
         nav ul li {
@@ -40,13 +43,13 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #333;
+            color: #ffffff;
             font-weight: bold;
             font-size: 1.2em;
         }
 
         nav ul li a:hover {
-            color: #4CAF50;
+            
         }
 
         /* Barra de pesquisa */
@@ -57,64 +60,73 @@
         .barra-pesquisa input[type="text"] {
             padding: 8px;
             font-size: 16px;
-            border: 1px solid #ccc;
+            border: 1px solid #ffffff;
             border-radius: 4px;
             margin-right: 8px;
         }
 
         .barra-pesquisa button {
             padding: 8px 12px;
-            background-color: #4CAF50;
-            color: white;
+            background-color: #e6c2ff45;
+            color: rgb(255, 255, 255);
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
 
         .barra-pesquisa button:hover {
-            background-color: #45a049;
+            background-color: #e6c2ff45;
         }
 
-        /* Espaços para as imagens */
-        section {
-            padding: 40px;
-        }
-
-        section h2 {
-            font-size: 2em;
-        }
-
-        section p {
-            font-size: 1.2em;
-            margin: 20px 0;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 10px;
-        }
-
-        .button:hover {
-            background-color: #45a049;
-        }
-
-        /* Espaços reservados para as imagens */
-        .imagem-placeholder {
-
-            width: 300px;
-            height: 200px;
-            background-color: #ccc;
+        /* Carrossel de imagens */
+        .carrossel {
+            position: relative;
+            max-width: 600px;
             margin: 20px auto;
-            display: cente;
+            overflow: hidden; /* Esconde as imagens que saem do contêiner */
+            border-radius: 10px; /* Bordas arredondadas */
+        }
+
+        .carrossel img {
+            width: 100%;
+            display: none; /* Esconde todas as imagens inicialmente */
+        }
+
+        .carrossel img.active {
+            display: block; /* Exibe apenas a imagem ativa */
+        }
+
+        /* Ícone do carrinho minimalista e descentralizado */
+        .carrinho {
+            position: absolute; /* Posiciona o ícone em relação ao header */
+            right: 70px; /* Distância do lado direito */
+            top: 33px; /* Distância do topo */
+            width: 50px; /* Largura do ícone */
+            height: 50px; /* Altura do ícone */
+            color: #d699d1; /* Cor do ícone */
+            border-radius: 80%; /* Borda arredondada */
+            background-color: #fff; /* Fundo branco */
+            padding: 25px; /* Espaçamento interno */
+        }
+
+        /* Imagem à esquerda */
+        .imagem-esquerda {
+            position: absolute; /* Para posicionar a imagem em relação ao header */
+            left: -40px; /* Distância do lado esquerdo */
+            top: -5px; /* Distância do topo */
+            width: 350px; /* Largura da imagem */
+            height: 200px; /* Altura da imagem */
+        }
+
+        .imagem-esquerda img {
+            width: 100%; /* Faz com que a imagem se ajuste ao contêiner */
+            height: 100%; /* Mantém a altura */
+            border-radius: 80%; /* Bordas arredondadas */
+
         }
 
         footer {
-            background-color: #f8f9fa;
+            background-color: #eae8e8;
             padding: 10px;
             position: fixed;
             bottom: 0;
@@ -129,7 +141,22 @@
 <body>
     <header>
         <h1>Casa dos Peludinhos</h1>
-        
+
+        <!-- Imagem ao lado esquerdo -->
+        <div class="imagem-esquerda">
+            <img src="foto.jpg" alt="Imagem do lado esquerdo" />
+        </div>
+
+        <!-- Ícone do carrinho -->
+        <a href="carrinho.html" class="carrinho">
+            <!-- Novo SVG do ícone do carrinho minimalista -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 1h4l2 7h14l-1.5 9H6" />
+                <circle cx="7" cy="19" r="1" fill="currentColor"/>
+                <circle cx="17" cy="19" r="1" fill="currentColor"/>
+            </svg>
+        </a>
+
         <!-- Barra de navegação -->
         <nav>
             <ul>
@@ -152,9 +179,12 @@
             <h2>Explore Nossos Produtos e Adote um Pet!</h2>
             <p>Aqui você encontra os melhores itens para seu pet e também pode adotar um amigo para a vida toda.</p>
 
-            <!-- Espaços reservados para as imagens -->
-            <div class="imagem-placeholder"></div>
-            <div class="imagem-placeholder"></div>
+            <!-- Carrossel de imagens -->
+            <div class="carrossel">
+                <img src="imagem1.jpg" class="active" alt="Produto 1">
+                <img src="imagem2.jpg" alt="Produto 2">
+                <img src="imagem3.jpg" alt="Produto 3">
+            </div>
 
             <!-- Botões de navegação para loja e adoção -->
             <a href="loja.html" class="button">Ir para a Loja</a>
@@ -163,8 +193,21 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Pet Shop & Adoção. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Casa dos Peludinhos. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        // JavaScript para o carrossel de imagens
+        let index = 0;
+        const images = document.querySelectorAll('.carrossel img');
+
+        function showNextImage() {
+            images[index].classList.remove('active');
+            index = (index + 1) % images.length; // Volta ao primeiro após o último
+            images[index].classList.add('active');
+        }
+
+        setInterval(showNextImage, 3000); // Muda a imagem a cada 3 segundos
+    </script>
 </body>
 </html>
-
