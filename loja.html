@@ -1,14 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Loja de itens para pets e adoção de animais.">
-    <title>Loja</title>
+    <title>Loja de Pets</title>
     <link rel="stylesheet" href="loja.css">
 </head>
 <body>
-    
-    
+    <header>
+        <h1>Bem-vindo à Loja!</h1>
+    </header>
+
+    <section class="carrossel">
+        <div class="carousel-images">
+            <img src="imagem1.jpg" alt="Imagem 1" class="active">
+            <img src="imagem2.jpg" alt="Imagem 2">
+            <img src="imagem3.jpg" alt="Imagem 3">
+        </div>
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+    </section>
+
+    <section class="categorias">
+        <h2>Categorias de Produtos</h2>
+        <div class="categoria">
+            <h3>Medicamentos</h3>
+            <div class="produtos">
+                <div class="produto">
+                    <img src="medicamento1.jpg" alt="Medicamento 1">
+                    <h4>Medicamento A</h4>
+                    <p>Preço: R$ 20,00</p>
+                </div>
+                <div class="produto">
+                    <img src="medicamento2.jpg" alt="Medicamento 2">
+                    <h4>Medicamento B</h4>
+                    <p>Preço: R$ 25,00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="categoria">
+            <h3>Brinquedos</h3>
+            <div class="produtos">
+                <div class="produto">
+                    <img src="brinquedo1.jpg" alt="Brinquedo 1">
+                    <h4>Brinquedo A</h4>
+                    <p>Preço: R$ 30,00</p>
+                </div>
+                <div class="produto">
+                    <img src="brinquedo2.jpg" alt="Brinquedo 2">
+                    <h4>Brinquedo B</h4>
+                    <p>Preço: R$ 35,00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="categoria">
+            <h3>Outros</h3>
+            <div class="produtos">
+                <div class="produto">
+                    <img src="outro1.jpg" alt="Outro 1">
+                    <h4>Produto A</h4>
+                    <p>Preço: R$ 15,00</p>
+                </div>
+                <div class="produto">
+                    <img src="outro2.jpg" alt="Outro 2">
+                    <h4>Produto B</h4>
+                    <p>Preço: R$ 18,00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-images img');
+
+        function changeImage(direction) {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+    </script>
 </body>
 </html>
