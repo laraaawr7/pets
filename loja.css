@@ -5,30 +5,44 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #af4c91;
     color: white;
     text-align: center;
     padding: 10px 0;
+
 }
+
+.opc {
+    text-align: center;
+padding: 2%;
+font-size: x-large;
+font-weight: 550;
+    
+
+} 
 
 .carrossel {
     position: relative;
     max-width: 600px;
     margin: 20px auto;
     overflow: hidden;
+    text-align: center;
 }
 
 .carousel-images {
     display: flex;
+    text-align: center;
 }
 
 .carousel-images img {
     width: 100%;
+    text-align: center;
     display: none;
 }
 
 .carousel-images img.active {
     display: block;
+    text-align: center;
 }
 
 button {
@@ -44,6 +58,7 @@ button {
 
 .prev {
     left: 10px;
+    
 }
 
 .next {
@@ -51,16 +66,19 @@ button {
 }
 
 .categorias {
+    text-align: center;
     margin: 20px;
 }
 
 .categoria {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .produtos {
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .produto {
@@ -70,10 +88,12 @@ button {
     margin: 10px;
     text-align: center;
     width: 150px;
+    text-align: center;
 }
 
 .produto img {
     width: 100%;
     height: auto;
+   
 }
 
