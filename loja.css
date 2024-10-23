@@ -5,14 +5,29 @@ body {
 }
 
 header {
-    background-color: #af4c91;
-    color: white;
+    background-color: #d699d1;
+    color: #fff;
+    padding: 50px;
+    position: relative;
     text-align: center;
-    padding: 10px 0;
-
+    
 }
 
-.home{
+.casa {
+    position: absolute; /* Posiciona o ícone em relação ao header */
+    left: -40px; /* Distância do lado esquerdo */
+    top: 70px; /* Distância do topo */
+    width: 350px; /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    border-radius: 50%; /* Borda arredondada */
+    background-color:#d699d1; /* Cor de fundo */
+    display: flex; /* Centraliza a imagem dentro da div */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.casa img {
+    width: 100%; /* Deixa a imagem responsiva */
     
 }
 
@@ -50,7 +65,7 @@ font-weight: 550;
 }
 
 button {
-    background-color: #4CAF50;
+    background-color:#d699d1;
     color: white;
     border: none;
     padding: 10px;
