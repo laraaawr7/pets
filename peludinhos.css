@@ -18,5 +18,19 @@ h1{
  
 }
 .casa{
+        position: absolute; 
+        left: -40px;
+        top: 70px; 
+        width: 350px; 
+        height: 20px; 
+        border-radius: 50%;
+        background-color:#d699d1;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+    
+}
+.casa img {
+    width: 100%;
     
 }
